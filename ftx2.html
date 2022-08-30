@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/37fb81c3ad.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="ftxlogo.png">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            position:sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+        .div12{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background-color:black;
+            position:sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+        .div1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* position:sticky;
+            position: -webkit-sticky;
+            top: 0; */
+        }
+        .div1 ul{
+            list-style-type: none;
+        }
+        .div1 ul li{
+            display: inline-block;
+            padding: 20px;
+            cursor: pointer;
+            font-family: "Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: white;
+            font-size: large;
+        }
+        .div1 ul li span li #drop{
+            color: white;
+            background-color: white;
+        }
+        .div1 span{
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .div2 h4{
+            display: inline-block;
+            display: inline-block;
+            color: white;
+            font-family: "Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            line-height: 1.75;
+            cursor: pointer;
+        }
+
+        input{
+            padding: 10px;
+            margin-left: 3px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            font-family: "Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: white;
+            font-size: large;
+            background-color: rgb(39, 34, 39);
+        }
+        input:focus{
+            outline: none;
+        }
+        .div2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-right: 20px;
+        }
+        .div2 button{
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            background-color: #0398af;
+            color: white;
+            font-family: "Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-size: large;
+            cursor: pointer;
+        }
+        .div2 button:hover{
+            background-color: #03b2cb;
+        }
+        .div2 span{
+            color: white;
+            font-size: large;
+            cursor: pointer;
+           
+        }
+        .divlast{
+            display: flex;
+        }
+        .ful{
+            list-style-type: none;
+            margin-left: 45px;
+        }
+        .ful li{
+            display: inline;
+            padding: 20px;
+            font-family: "Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-size: large;
+            color: rgb(187, 184, 184);
+            cursor: pointer;
+        }
+        .ful li:hover{
+            background-color:#2b3446;
+            border-radius: 8px;
+            height:8px;
+        }
+
+        .sul{
+            list-style-type: none;
+            display: flex;
+            margin-left: 120px;
+        }
+        .sul li{
+            padding: 0 20px;
+            font-family: "Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-size: large;
+            color:rgb(187, 184, 184);
+            cursor: pointer;
+        }
+        
+        .divlast{
+            padding: 15px 0;
+            background-color: #1C2230;
+        }
+        .divlast span{
+            color: white;
+            margin-left: 10px;
+            font-size: large;
+            cursor: pointer;
+        }
+        /* .sectionA */
+        .sectionA{
+            background-color: black;
+        }
+        .sectionA .div1 img{
+            height: 70vh;
+            width: 100%;
+        }
+        .btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .btns button{
+            margin:0 10px;
+            padding: 4px 8px;
+            text-align: center;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: white;
+            background-color: #1C2230;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: large;
+        }
+        .statistic{
+            margin: auto;
+            justify-self: center;
+            width: 500px;
+            height: 110px;
+            background-color: #171B24;;
+            margin-top: 20px;
+            border-radius: 8px;
+            
+        }
+        .statistic .sta{
+            text-align: center;
+            padding: 10px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: #00B4C9;
+            font-weight: bolder;
+        }
+        .billion{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 0 10px;
+        }
+        .bi h5{
+            text-align: center;
+            font-size: large;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: rgb(95, 93, 93);
+        }
+        .b2 h5{
+            text-align: center;
+            font-size: large;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: rgb(95, 93, 93);
+        }
+        .b3 h5{
+            text-align: center;
+            font-size: large;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: rgb(95, 93, 93);
+        }
+        .bi h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+        }
+        .b2 h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+        }
+        .b3 h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+        }
+        .coins{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+        .bitcoin{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .divbit{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .divbit span{
+            margin-right:20px;
+            font-size: xx-large;
+            color: yellow;
+        }
+        .bitcoin h4{
+            padding-right: 30px;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: rgb(95, 93, 93);
+            font-size: large;
+        }
+        .bitcoin h4  #sp1{
+            color:white;
+        }
+        .bitcoin h4  #sp2{
+            color: red;
+        }
+        .eth{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 10px;
+            margin-right: 40px;
+        }
+        .diveth{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .diveth span{
+            display:flex;
+            font-size: xx-large;
+            margin-right: 30px;
+            color: #00B4C9;
+            
+        }
+        .eth h4{
+            padding: 5px 20px;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: rgb(95, 93, 93);
+            font-size: large;
+        }
+        .eth h4 #spa1{
+            color:white;
+        } 
+        .eth h4 #spa2{
+            color: green;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .eth h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-size: large;
+            letter-spacing: 2px;
+        }
+        .divbit h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-size: large;
+            letter-spacing: 2px;
+        }
+        .bar1{
+            width: 300px;
+            height: 70px;
+            background-color:white;
+            border-radius: 8px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .bar1 h4{
+            padding-left: 10px;
+            padding-top: 6px;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+        }
+        .bar1 h4 span{
+            color:rgb(95, 93, 93);
+            font-weight: 100;
+            padding-bottom: 10px;
+        }
+        .bar2{
+            width: 300px;
+            height: 70px;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bar2 h4{
+            padding-left: 10px;
+            padding-top: 6px;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+        }
+        .bar2 h4 span{
+            color:rgb(95, 93, 93);
+            font-weight: 100;
+        }
+        .bar3{
+            width: 300px;
+            border-radius: 8px;
+            height: 70px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bar3 h4{
+            padding: 0 10px;
+            font-size: large;
+            color:rgb(95, 93, 93) ;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .bars{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 60px;
+            margin: 0 30px;
+        }
+        .bar1 .toggle span{
+            padding: 0 10px;
+            font-size: large;
+            color:rgb(95, 93, 93) ;
+        }
+        .bar2 .toggle span{
+            padding: 0 10px;
+            font-size: large;
+            color:rgb(95, 93, 93) ;
+        }
+        .secB-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            padding-bottom: 50px;
+        }
+        .secB-btn .btn2{
+            padding: 8px 10px;
+            margin-left: 20px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            background-color: rgb(95, 93, 93);
+            cursor: pointer;
+            color: rgb(151, 150, 150);
+            font-size: large;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .secB-btn .btn1{
+            padding:8px 15px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            background-color:#0398af ;
+            transition: 0.5s;
+            cursor: pointer;
+            font-size: large;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .secB-btn .btn1:hover{
+            background-color: white;
+            transition: 0.5s;
+        }
+        .sectionB{
+            background-color: #2b3446;
+        }
+        .sectionC{
+            background-color: black;
+        }
+        .sectionC .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            margin: 0 40px;
+            padding: 30px 20px;
+        }
+        .flex1{
+            width: 250px;
+            border: 2px solid transparent;
+            align-items: center;
+            margin-top: 10px;
+            background-color: #2b3446;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .flex1:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+            background-color: #78eafc;
+        }
+        
+        .flex1 h3{
+            text-align: center;
+            font-size: large;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+            padding-top: 2px;
+        }
+        .flex1 .flexitem{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .flex11{
+            width: 250px;
+            margin-bottom: 25px;
+            border: 2px solid transparent;
+            align-items: center;
+            margin-top: 10px;
+            background-color: #2b3446;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+           
+        }
+        .flex11:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+            background-color: #78eafc;
+        }
+        .sectionC .flex-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            margin: 0 40px;
+            padding: 5px 20px;
+        }
+        .flex11-con{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .flex11-con h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+            font-size: large;
+        }
+        .flexitem h3{
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+            font-size: large;
+        }
+        .flex-imgtext{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            /* gap: 200px; */
+            padding-top: 80px;
+        }
+        .imgtext{
+            margin-right: 30px;
+        }
+        .imgtext h1{
+            font-size:1000;
+            font-weight: bolder;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            color: white;
+
+        }
+        .sectionD{
+            background-color: #1C2230;
+        }
+        .flex-imgtext img{
+            margin-left: 50px;
+        }
+        .imgtext h5{
+            color: white;
+            font-size:x-large;
+            padding-top: 10px;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .imgtext h5 span{
+            color: #00B4C9;
+            cursor: pointer;
+        }
+        .footer-items{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding-top: 50px;
+        }
+        .Resources ul{
+            list-style-type: none;
+        }
+        .Resources li{
+            padding: 5px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        .Resources h2{
+            font-size: larger;
+            padding-bottom: 20px;
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .company ul{
+            list-style-type: none;
+        }
+        .company li{
+            padding: 5px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        .company h4{
+            font-size: larger;
+            padding-bottom: 70px;
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .support ul{
+            list-style-type: none;
+        }
+        .support li{
+            padding: 5px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        .support h4{
+            font-size: larger;
+            padding-bottom: 147px;
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .learn ul{
+            list-style-type: none;
+        }
+        .learn li{
+            padding: 5px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        .learn h4{
+            font-size: larger;
+            padding-bottom: 117px;
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .partners ul{
+            list-style-type: none;
+        }
+        .partners li{
+            padding: 5px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        .partners h4{
+            font-size: larger;
+            padding-bottom: 150px;
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .founders ul{
+            list-style-type: none;
+        }
+        .founders li{
+            padding: 5px 0;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        .founders h4{
+            font-size: larger;
+            padding-bottom: 100px;
+            color: white;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+        }
+        .flof ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .flof img{
+            padding-bottom: 140px;
+        }
+        .flof li{
+            font-size:xx-large;
+            font-weight: bolder;
+            padding: 0 5px;
+            cursor: pointer;
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            cursor: pointer;
+            color:rgb(187, 184, 184)
+        }
+        footer{
+            background-color: black;
+        }
+        .divcopy h4{
+            text-align: center;
+            color:rgb(187, 184, 184);
+            font-family:"Inter", "Roboto", "Noto Sans SC Sliced", "Helvetica", "Arial", sans-serif;
+            padding-top: 2px;
+            
+            
+        }
+        .divcopy{
+            padding-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="div12">
+        <div class="div1">
+            <span><img src="ftxlogo.png" alt="" width="100px"></span>
+            <ul>
+                <li>Markets <span><i id="drop" class="fa-solid fa-caret-down"></i></span></li>
+                <li>More <span><i id="drop" class="fa-solid fa-caret-down"></i></li>
+                <li>Help <span><i id="drop" class="fa-solid fa-caret-down"></i></li>
+            </ul>
+            <input type="search" placeholder="Search market">
+        </div>
+        <div class="div2">
+            <h4>Login</h4>
+            <button>Creat a free account</button>
+            <span><i class="fa-solid fa-gear"></i></span>
+        </div>
+    </div>
+    <div class="divlast">
+        <div class="hand"><span><i class="fa-solid fa-bars"></i></span></div>
+        <ul class="ful">
+            <li>FTT</li>
+            <li>SRM</li>
+            <li>BTC</li>
+            <li>ETH</li>
+        </ul>
+        <ul class="sul">
+            <li>Features</li>
+            <li>Spot</li>
+            <li>Leveraged Tokens</li>
+            <li>Volitality</li>
+            <li>Prediction</li>
+            <li>Fiat</li>
+            <li>Recent</li>
+        </ul>
+    </div>
+    </header>
+
+    <div class="sectionA">
+    <div class="div1" >
+        <img  id="display" src="ftx-hero.png" alt="">
+
+    </div>
+    <div class="btns">
+        <button onclick="firstimg()">FIRST IMAGE</button>
+        <button onclick="secondimg()">SECOND IMAGE</button>
+        <button onclick="thirdimg()">THIRD IMAGE</button>
+    </div>
+    <div class="statistic">
+        <h5 class="sta">FTX Statistics</h5>
+        <div class="billion">
+            <div class="bi">
+                <h5>24h Volume</h5>
+                <h3>$7,183,561,598</h3>
+            </div>
+            <div class="b2">
+                <h5>30d Volume</h5>
+                <h3>$296,583,561,598</h3>
+            </div>
+            <div class="b3">
+                <h5>24h Lending</h5>
+                <h3>$4,483,991,598</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="coins">
+        <div class="bitcoin">
+            <div class="divbit"><span><i class="fa-brands fa-bitcoin"></i></span> <h3>BTC-PERP</h3></div>
+            <h4>Mark<br><span id="sp1">21,540</span></h4>
+            <h4>24h change<br><span id="sp2">-0.08%</span></h4>
+        </div>
+        <div class="eth">
+            <div class="diveth"><span><i class="fa-brands fa-ethereum"></i></span><h3>ETH-PERP</h3></div>
+            <h4>Mark<br><span id="spa1">3.3805</span></h4>
+            <h4>24 change<br><span id="spa2">+2.24%</span></h4>
+        </div>
+    </div>
+    </div>
+    <div class="sectionB">
+        <div class="bars">
+        <div class="bar1">
+            <h4><span>From Coin</span><br>USD (USD)</h4>
+            <div class="toggle">
+                <span><i class="fa-solid fa-xmark"></i></span>
+                <span><i id="drop" class="fa-solid fa-caret-down"></i></span>
+            </div>
+
+        </div>
+        <div class="bar2">
+            <h4><span>To Coin</span><br>Bitcoin (BTC)</h4>
+            <div class="toggle">
+                <span><i class="fa-solid fa-xmark"></i></span>
+                <span><i id="drop" class="fa-solid fa-caret-down"></i></span>
+            </div>
+            
+        </div>
+        <div class="bar3">
+            <h4>Quantity</h4>
+            <h4>USD</h4>
+            
+        </div>
+    </div>
+    <div class="secB-btn">
+        <button class="btn1">Login</button>
+        <button class="btn2">Convert</button>
+    </div>
+    </div>
+    <div class="sectionC">
+        <div class="flex">
+            <div class="flex1">
+                <div class="flexitem">
+                <img src="f1.svg" alt="" width="100px" height="100px">
+                <h3>FUTURES</h3>
+            </div>
+            </div>
+            <div class="flex1">
+                <div class="flexitem">
+                <img src="f2.svg" alt="" width="100px" height="100px">
+                <h3>SPOT</h3>
+            </div>
+            </div>
+            <div class="flex1">
+                <div class="flexitem">
+                <img src="f4.svg" alt="" width="100px" height="100px">
+                <h3>FUTURES</h3>
+            </div>
+            </div>
+            <div class="flex1">
+                <div class="flexitem">
+                <img src="f3.svg" alt="" width="100px" height="100px">
+                <h3>FUTURES</h3>
+            </div>
+            </div>
+        </div>
+        <div class="flex-1">
+            <div class="flex11">
+                <div class="flex11-con">
+                <img src="f5.svg" alt="" width="100px" height="100px">
+                <h3 style="text-align:center ;"> PREDICTION<br>MARKETS</h3>
+            </div>
+            </div>
+            <div class="flex11">
+                <div class="flex11-con">
+                <img src="f6.svg" alt="" width="100px" height="100px">
+                <h3>FIAT</h3>
+            </div>
+            </div>
+            <div class="flex11">
+                <div class="flex11-con">
+                <img src="f7.svg" alt="" width="100px" height="100px">
+                <h3>STAKE</h3>
+            </div>
+            </div>
+            <div class="flex11">
+                <div class="flex11-con">
+                <img src="f8.svg" alt="" width="100px" height="100px">
+                <h3>FTX PAY</h3>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="sectionD">
+        <div class="flex-imgtext">
+            <img src="ftx pic.png" alt="" width="700px">
+            <div class="imgtext">
+                <h1>Trade Anywhere & Anytime</h1>
+                <h5>Download the FTX mobile trading app, <span>FTX pro</span></h5>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-items">
+            <div class="Resources">
+                <h2>Resources</h2>
+                <ul>
+                    <li>Fees</li>
+                    <li>API</li>
+                    <li>VIP Program</li>
+                    <li>Institutions</li>
+                    <li>Ambassador Program</li>
+                    <li>FTX Whitelabel</li>
+                    <li>Volume Monitor</li>
+                    <li>Leaderboard</li>
+                </ul>
+
+            </div>
+            <div class="company">
+                <h4>Company</h4>
+                <ul>
+                    <li>About</li>
+                    <li>Contant Us</li>
+                    <li>Policy</li>
+                    <li>Legal</li>
+                    <li>FTT</li>
+                    <li>FTX Blog</li>
+                </ul>
+            </div>
+            <div class="support">
+                <h4>Support</h4>
+                <ul>
+                    <li>Announcements</li>
+                    <li>Help Center</li>
+                    <li>File a Support Ticket</li>
+                </ul>
+            </div>
+            <div class="learn">
+                <h4>Learn</h4>
+                <ul>
+                    <li>Leveraged Tokens</li>
+                    <li>MOVE Contract</li>
+                    <li>Options</li>
+                    <li>Quant Zone</li>
+                </ul>
+            </div>
+            <div class="partners">
+                <h4>Partners</h4>
+                <ul>
+                    <li>FTX International</li>
+                    <li>FTX US</li>
+                </ul>
+            </div>
+            <div class="founders">
+                <h4>Founders</h4>
+                <ul>
+                    <li>FTX Foundation</li>
+                    <li>FTX Community Giving</li>
+                    <li>FTX Climate</li>
+                    <li>FTX Future Fund</li>
+                </ul>
+            </div>
+            <div class="flof">
+                <img src="ftxlogo.png" alt="" width="150px">
+                <ul>
+                    <li><i class="fa-brands fa-telegram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-weibo"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="divcopy">
+            <h4>FTX Services and FTX Token (FTT) are not available in the United States or other prohibited jurisdictions.</h4>
+            <h4>Services for this product are facilitated through FTX Trading Ltd and/or FTX Digital Markets Ltd.</h4>
+        </div>
+    </footer>
+    <script>
+        function firstimg(){
+            document.getElementById("display").src="ftxhero3.jpg";
+        }
+        function secondimg(){
+            document.getElementById("display").src="ftxhero4.png";
+        }
+        function thirdimg(){
+            document.getElementById("display").src="ftxhero5.png";
+        }
+
+    </script>
+</body>
+</html>
